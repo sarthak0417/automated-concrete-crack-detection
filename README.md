@@ -10,9 +10,9 @@ The project implements and evaluates three OpenCV-based approaches:
 2. Adaptive Thresholding
 3. Morphological Processing
 
-The primary objective is to compare the effectiveness of these methods in identifying visible concrete surface cracks using a labeled image dataset.
+The primary objective is to compare their effectiveness in identifying visible concrete surface cracks using a labeled image dataset.
 
-The project includes a literature review, research methodology, experimental evaluation, quantitative performance analysis, and an interactive web application for demonstrating concrete crack detection.
+The project includes a literature review, research methodology, experimental evaluation, quantitative performance analysis, and an interactive Streamlit application for demonstrating concrete crack detection.
 
 ## Research Background
 
@@ -328,4 +328,56 @@ The project maintains documentation covering the research process.
 - [Results Analysis](docs/results_analysis.md)
 - [Bibliography](docs/references.bib)
 
-The
+The documentation connects the reviewed literature to the implemented techniques and experimental findings.
+
+## Research Findings
+
+The preliminary experiment demonstrates that traditional image-processing techniques can be used to construct lightweight image-level concrete crack classifiers.
+
+Among the evaluated approaches, Canny edge detection achieved the highest accuracy and F1-score under the selected experimental conditions.
+
+Adaptive thresholding achieved relatively high recall but produced more false-positive classifications.
+
+Morphological processing improved accuracy and precision compared with adaptive thresholding alone, although its performance remained below Canny in this experiment.
+
+## Limitations
+
+- Only 400 images were sampled from the complete dataset.
+- Final classification evaluation was performed on 280 held-out images.
+- Classification relies on foreground-pixel-density heuristics.
+- Pixel-level crack segmentation accuracy was not evaluated.
+- The system does not estimate crack width, depth, or structural safety.
+- Performance on independent infrastructure datasets remains untested.
+- Classification thresholds may require recalibration for different imaging conditions.
+
+## Future Scope
+
+Potential extensions include:
+
+- CNN-based crack classification.
+- Pixel-level crack segmentation.
+- Crack width and length estimation.
+- Evaluation on additional independent datasets.
+- Real-time image and video-based inspection.
+- Improved robustness under varying lighting and surface conditions.
+
+## Project Status
+
+The core implementation and preliminary experimental evaluation have been completed.
+
+The project currently includes:
+
+- Three OpenCV-based image-processing approaches.
+- A labeled concrete crack dataset.
+- Quantitative experimental evaluation.
+- An interactive Streamlit demonstration application.
+- Literature review and research documentation.
+- GitHub-based version control.
+
+The final research paper is planned for preparation using LaTeX and Overleaf.
+
+## Disclaimer
+
+This project is an academic research prototype designed to investigate automated concrete surface crack classification using computer vision.
+
+It is not intended to replace professional structural inspection or determine the safety of civil infrastructure.
