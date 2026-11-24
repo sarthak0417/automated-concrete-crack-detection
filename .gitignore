@@ -1,4 +1,5 @@
 
+# Python environment
 .venv/
 __pycache__/
 *.py[cod]
@@ -8,14 +9,16 @@ __pycache__/
 .vscode/
 .pytest_cache/
 
+# Dataset - exclude large image files
 data/*
 !data/.gitkeep
 
-experiments/results/
+# Trained model files
 *.h5
 *.keras
 *.pt
 *.pth
 
+# System files
 .DS_Store
 Thumbs.db
